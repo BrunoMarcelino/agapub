@@ -3,20 +3,24 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+
+  ok() {
+    alert('Tiako iha Charmella et bon8');
+  };
+
+
   render() {
+    const title = 'This is the application\'s Charmella';
+    const test = [
+      'Mba potsero moa eto'
+    ]
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-           new application Charmella
-          </a>
-        </header>
+        <div> {
+          test.map(element => {
+            return <h1 onClick={this.ok}>{element}</h1>
+        })
+        } </div>
       </div>
     );
   }
